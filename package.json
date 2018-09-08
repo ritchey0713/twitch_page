@@ -1,16 +1,31 @@
 {
+  "homepage": "https://git.heroku.com/twitchaboutme.git",
   "name": "twitch_app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.0.0",
+    "npm": "3.10.10"
+  },
   "dependencies": {
+    "ajv": "^6.5.3",
+    "disqus-react": "^1.0.5",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.4.0-alpha.1",
+    "react-scripts": "1.1.5",
+    "surge": "^0.20.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "react-router-dom": "^4.3.1"
   }
 }
